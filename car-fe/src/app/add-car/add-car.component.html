@@ -1,0 +1,43 @@
+<div id="main">
+    <div id="add">
+        <form class="row g-3" (ngSubmit)="submit()">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Registration Number</label>
+              <input type="email" class="form-control" id="inputEmail4" [(ngModel)]="carEntity.regn_No" name="car_reg_no">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Model</label>
+              <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="carEntity.car_Model" name="car_model">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Year Of Manufacturing</label>
+              <input type="text" class="form-control" id="inputCity" [(ngModel)]="carEntity.year_Of_Manufacturing" name="car_yearof_manufacturing">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Company</label>
+              <select id="inputState" class="form-select" [(ngModel)]="carEntity.car_Company" name="car_company">
+                <option selected>Choose...</option>
+                <option>Audi</option>
+                <option>BMW</option>
+                <option>Mercedes-Benz</option>
+                <option>Tata Motors</option>
+                <option>Hyundai</option>
+                <option>Kia</option>
+                <option>Toyota</option>
+                <option>Tesla</option>
+                <option>Renault</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Owner Name</label>
+              <input type="text" class="form-control" id="inputZip" [(ngModel)]="carEntity.owner_Name" name="car_ownername">
+            </div>
+            
+            <div class="col-12">
+
+                <button type="submit" class="btn btn-success">ADD</button>
+              
+            </div>
+          </form>
+    </div>
+</div>

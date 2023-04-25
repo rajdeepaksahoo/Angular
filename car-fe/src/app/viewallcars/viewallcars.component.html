@@ -1,0 +1,55 @@
+<div id="main">
+    
+    <div id="mtbl">
+        <h2 style="text-align: center;">All Car List</h2>
+        <form class="d-flex" (ngSubmit)="showOne(id.value)">
+            <input class="form-control me-2" #id type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <table>
+            <tr>
+                <td>
+                    Reg_no
+                </td>
+                <td>
+                    Company
+                </td>
+                <td>
+                    Model
+                </td>
+                <td>
+                    Year_Of_Manufacturing
+                </td>
+                <td>
+                    Owner
+                </td>
+            </tr>
+        
+            <tr *ngFor="let c of cars">
+                <td>
+                    {{c["regn_No"]}}
+                </td>
+                <td>
+                    {{c["car_Company"]}}
+                </td>
+                <td>
+                    {{c["car_Model"]}}
+                </td>
+                <td>
+                    {{c["year_Of_Manufacturing"]}}
+                </td>
+                <td>
+                    {{c["owner_Name"]}}
+                </td>
+                <td>
+                    <button class="btn  bg-success" (click)="showUpdate(c['regn_No'])">Update</button>
+                </td>
+                <td>
+                    <button class="btn  bg-danger" (click)="delete(c['regn_No'])">Delete</button>
+                </td>
+            </tr>
+        
+        </table>
+    
+    </div>
+</div>

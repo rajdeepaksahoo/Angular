@@ -1,0 +1,49 @@
+
+<form (ngSubmit)="submit()">
+    <div>
+        <div mat-dailog-content class="b">
+              <div id="main">
+                <div id="add">
+                  <h1 mat-dailog-title style="text-align: center;">Update Product</h1> <br><br>
+                    <form class="row g-3" (ngSubmit)="submit()">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Registration Number</label>
+                          <input type="email" class="form-control" [(ngModel)]="carEntity.regn_No" name="reg_No" id="car_reg_no">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Model</label>
+                          <input type="text" class="form-control" [(ngModel)]="carEntity.car_Model" name="car_model">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">Year Of Manufacturing</label>
+                          <input type="text" class="form-control" [(ngModel)]="carEntity.year_Of_Manufacturing" name="car_yearof_manufacturing" id="car_yearof_manufacturing">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label">Company</label>
+                          <select class="form-select" [(ngModel)]="carEntity.car_Company" name="car_company" id="car_company">
+                            <option selected>Choose...</option>
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Tata Motors</option>
+                            <option>Hyundai</option>
+                            <option>Kia</option>
+                            <option>Toyota</option>
+                            <option>Renault</option>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">Owner Name</label>
+                          <input type="text" class="form-control" [(ngModel)]="carEntity.owner_Name" name="car_ownername" id="car_ownername">
+                        </div>
+                        
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-success">SAVE</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+    </form>
